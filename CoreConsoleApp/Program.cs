@@ -11,14 +11,15 @@ namespace CoreConsoleApp
     {
         static void Main(string[] args)
         {
-            string testProject = @"C:\Projects\TP_PerformanceTests\TP_PerformanceTests\UnitTestProject1\bin\Debug\UnitTestProject1.dll";
+            // Path to your test dll
+            string testProject = @"C:\Projects\UnitTestProject1\bin\Debug\UnitTestProject1.dll";
             string runsettings = @"<?xml version=""1.0"" encoding=""utf-8""?>
                                              <RunSettings>
                                                <RunConfiguration>
                                                </RunConfiguration>
                                              </RunSettings>";
 
-            VsTestConsoleWrapper wrapper = new VsTestConsoleWrapper(@"C:\vstest\artifacts\Debug\net451\win7-x64\vstest.console.exe");
+            VsTestConsoleWrapper wrapper = new VsTestConsoleWrapper(@"{path to your vstest.console.exe}");
             var handler = new RunEventsHandler();
 
             Console.WriteLine("Started");
